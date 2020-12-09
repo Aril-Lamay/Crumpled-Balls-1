@@ -14,7 +14,7 @@ function preload()
 
 function setup() {
 	//creating the canvas
-	createCanvas(800, 700);
+	createCanvas(1400, 700);
 
 	//creating our own world
 	engine = Engine.create();
@@ -22,11 +22,11 @@ function setup() {
 
 	//creating the different objects from the classes
 	paper = new Paper(100,670,20);
-	ground = new Ground(400,690,800,20);
+	ground = new Ground(700,690,1400,20);
 
-	dbin1 = new Dustbin(500,630,20,60);
-	dbin2 = new Dustbin(650,630,20,60);
-	dbin3 = new Dustbin(575,670,170,20);
+	dbin1 = new Dustbin(900,630,20,60);
+	dbin2 = new Dustbin(1050,630,20,60);
+	dbin3 = new Dustbin(975,670,170,20);
 
 	//running the engine
 	Engine.run(engine);
@@ -53,7 +53,7 @@ function draw() {
 }
 function keyPressed(){
 if (keyCode === UP_ARROW){
-	Matter.Body.applyForce(paper.body,paper.body.position,{x:35,y:-85});
+	Matter.Body.applyForce(paper.body,paper.body.position,{x:20,y:-20});
 }
 }
 
